@@ -5,7 +5,7 @@ let gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('sass', function() {
-    return gulp.src('app/scss/style.scss')
+    return gulp.src('app/scss/**/*.scss')
         .pipe(sass({ outputStyle: 'compressed' })) //  {outputStyle: 'compressed'} expanded сжимает css
         .pipe(rename({ suffix: '.min' })) // переписывает style.scss на style.min.scss
         .pipe(autoprefixer({ // < ---  автопрефиксер
